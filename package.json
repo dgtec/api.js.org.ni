@@ -1,0 +1,23 @@
+{
+  "name": "api.js.org.ni",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "4.0.0",
+    "express-graphql": "0.6.7",
+    "graphql": "0.10.5",
+    "graphql-relay": "0.5.2",
+    "micro": "8.0.2",
+    "pg": "7.1.0",
+    "pg-hstore": "2.3.2",
+    "sequelize": "4.4.2"
+  },
+  "devDependencies": {
+    "micro-dev": "1.2.0",
+    "xo": "0.18.2"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
+  }
+}
