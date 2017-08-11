@@ -17,6 +17,9 @@
     "micro-dev": "1.2.0",
     "xo": "0.18.2"
   },
+  "xo": {
+    "space": true
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "micro-dev -p 4000"

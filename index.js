@@ -1,5 +1,5 @@
 const {microGraphiql, microGraphql} = require('graphql-server-micro');
-const { send } = require('micro');
+const {send} = require('micro');
 const {get, post, router} = require('microrouter');
 
 const schema = require('./schema');

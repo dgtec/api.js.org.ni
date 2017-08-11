@@ -1,31 +1,31 @@
 const {
 	GraphQLObjectType,
-	GraphQLSchema
+  GraphQLSchema
 } = require('graphql');
 const {
 	fromGlobalId,
-	nodeDefinitions
+  nodeDefinitions
 } = require('graphql-relay');
 
 const {nodeField, nodeInterface} = nodeDefinitions(
-	globalId => {
-		const {id, type} = fromGlobalId(globalId);
+  globalId => {
+    const {id, type} = fromGlobalId(globalId);
 
-		return null;
-	},
-	obj => {
-		return null;
-	}
+    return null;
+  },
+  obj => {
+    return null;
+  }
 );
 
 const Query = new GraphQLObjectType({
-	description: 'The query root of JSNI\'s GraphQL interface.',
-	name: 'Query',
-	fields: {
-		node: nodeField
-	}
+  description: 'The query root of JSNI\'s GraphQL interface.',
+  name: 'Query',
+  fields: {
+    node: nodeField
+  }
 });
 
 module.exports = new GraphQLSchema({
-	query: Query
+  query: Query
 });
