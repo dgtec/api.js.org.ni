@@ -1,14 +1,9 @@
-const {fromGlobalId, nodeDefinitions} = require('graphql-relay');
+const { nodeDefinitions } = require('graphql-relay');
 
-const {nodeField, nodeInterface} = nodeDefinitions(
-  globalId => {
-    const {id, type} = fromGlobalId(globalId);
+const { idFetcher, typeResolver } = require('./registry');
 
-    return null;
-  },
-  obj => {
-    return null;
-  }
+const { nodeField, nodeInterface } = nodeDefinitions(
+  idFetcher, typeResolver
 );
 
 module.exports = {

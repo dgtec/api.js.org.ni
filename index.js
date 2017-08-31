@@ -1,11 +1,11 @@
-const {microGraphiql, microGraphql} = require('graphql-server-micro');
-const {send} = require('micro');
+const { microGraphiql, microGraphql } = require('graphql-server-micro');
+const { send } = require('micro');
 const cors = require('micro-cors')();
-const {get, post, router} = require('microrouter');
+const { get, post, router } = require('microrouter');
 
 const schema = require('./schema');
 
-const graphqlHandler = microGraphql({schema});
+const graphqlHandler = microGraphql({ schema });
 const graphiqlHandler = microGraphiql({endpointURL: '/graphql'});
 
 module.exports = cors(router(

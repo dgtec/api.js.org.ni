@@ -1,9 +1,9 @@
 const bcrypt = require('bcrypt');
-const {GraphQLNonNull, GraphQLString} = require('graphql');
-const {mutationWithClientMutationId} = require('graphql-relay');
+const { GraphQLNonNull, GraphQLString } = require('graphql');
+const { mutationWithClientMutationId } = require('graphql-relay');
 
-const {User} = require('../models');
-const {GraphQLUser} = require('../types/user');
+const { User } = require('../models');
+const { GraphQLUser } = require('../types/user');
 
 const CreateUserMutation = mutationWithClientMutationId({
   description: 'Creates a new user.',
@@ -29,7 +29,7 @@ const CreateUserMutation = mutationWithClientMutationId({
       resolve: user => user
     }
   },
-  mutateAndGetPayload: async ({email, password, username}) => {
+  mutateAndGetPayload: async ({ email, password, username }) => {
     if (password.trim() === '') {
       throw new Error('Password is required');
     }
