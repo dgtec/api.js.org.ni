@@ -21,7 +21,10 @@
     "xo": "0.18.2"
   },
   "xo": {
-    "space": true
+    "space": true,
+    "rules": {
+      "object-curly-spacing": 0
+    }
   },
   "scripts": {
     "start": "node index.js",
