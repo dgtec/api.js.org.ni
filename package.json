@@ -10,6 +10,7 @@
     "graphql-relay": "0.5.2",
     "graphql-server-micro": "1.1.0",
     "micro": "8.0.2",
+    "micro-cors": "0.0.4",
     "microrouter": "2.2.2",
     "pg": "7.1.0",
     "pg-hstore": "2.3.2",
